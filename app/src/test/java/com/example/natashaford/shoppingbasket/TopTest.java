@@ -7,7 +7,7 @@ import static org.junit.Assert.assertEquals;
 
 public class TopTest {
 
-    Top top;
+    private Top top;
 
     @Before
     public void setUp() throws Exception {

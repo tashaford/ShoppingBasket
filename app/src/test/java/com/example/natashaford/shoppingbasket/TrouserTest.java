@@ -7,7 +7,7 @@ import static org.junit.Assert.assertEquals;
 
 public class TrouserTest {
 
-    Trouser trouser;
+    private Trouser trouser;
 
     @Before
     public void setUp() throws Exception {

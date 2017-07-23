@@ -7,7 +7,7 @@ import static org.junit.Assert.assertEquals;
 
 public class CustomerTest {
 
-    Customer cust;
+    private Customer cust;
 
     @Before
     public void setup(){

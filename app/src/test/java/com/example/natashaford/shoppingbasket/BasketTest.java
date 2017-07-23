@@ -7,12 +7,12 @@ import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 
 public class BasketTest {
-    Customer cust1;
-    Customer cust2;
-    Basket basket1;
-    Basket basket2;
-    Product top;
-    Product trouser;
+    private Customer cust1;
+    private Customer cust2;
+    private Basket basket1;
+    private Basket basket2;
+    private Product top;
+    private Product trouser;
 
     @Before
     public void setUp() throws Exception {
@@ -20,9 +20,8 @@ public class BasketTest {
         cust2 = new Customer("Euan", true);
         basket1 = new Basket(cust1);
         basket2 = new Basket(cust2);
-        top = new Top("topOne",5);
-        trouser = new Trouser("trouserOne",20);
-
+        top = new Top("topOne", 5);
+        trouser = new Trouser("trouserOne", 20);
     }
 
     @Test
