@@ -1,15 +1,13 @@
 package com.example.natashaford.shoppingbasket;
 
-/**
- * Created by natashaford on 21/07/2017.
- */
-
 public class Customer {
 
     String name;
+    Boolean loyal;
 
-    public Customer(String name) {
+    public Customer(String name, Boolean loyal) {
         this.name = name;
+        this.loyal = loyal;
     }
 
     public String getName() {
@@ -18,5 +16,13 @@ public class Customer {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public Boolean getLoyal() {
+        return loyal;
+    }
+
+    public void setLoyal(Boolean loyal) {
+        this.loyal = loyal;
     }
 }

@@ -1,26 +1,22 @@
 package com.example.natashaford.shoppingbasket;
 
-/**
- * Created by natashaford on 21/07/2017.
- */
-
 public class Top implements Product {
 
-    final int id;
-    final int cost;
+    final double cost;
+    final String name;
 
-    public Top(int id, int cost) {
-        this.id = id;
+    public Top(String name, double cost) {
+        this.name = name;
         this.cost = cost;
     }
 
     @Override
-    public int getId() {
-        return id;
+    public String getName() {
+        return name;
     }
 
     @Override
-    public int getCost() {
+    public double getCost() {
         return cost;
     }
 }

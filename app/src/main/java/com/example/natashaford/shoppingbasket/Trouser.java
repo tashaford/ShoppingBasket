@@ -1,26 +1,22 @@
 package com.example.natashaford.shoppingbasket;
 
-/**
- * Created by natashaford on 21/07/2017.
- */
-
 public class Trouser implements Product {
 
-    int id;
-    int cost;
+    final double cost;
+    final String name;
 
-    public Trouser(int id, int cost) {
-        this.id = id;
+    public Trouser(String name, double cost) {
+        this.name = name;
         this.cost = cost;
     }
 
     @Override
-    public int getId() {
-        return id;
+    public String getName() {
+        return name;
     }
 
     @Override
-    public int getCost() {
+    public double getCost() {
         return cost;
     }
 }

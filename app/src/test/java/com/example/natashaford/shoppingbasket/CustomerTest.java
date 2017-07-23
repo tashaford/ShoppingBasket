@@ -5,17 +5,13 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
-/**
- * Created by natashaford on 21/07/2017.
- */
-
 public class CustomerTest {
 
     Customer cust;
 
     @Before
     public void setup(){
-        cust = new Customer ("Natasha");
+        cust = new Customer ("Natasha", true);
     }
 
     @Test
@@ -29,4 +25,14 @@ public class CustomerTest {
         assertEquals("Tasha", cust.getName());
     }
 
+    @Test
+    public void checkLoyal() throws Exception {
+        assertEquals(true, cust.getLoyal());
+    }
+
+    @Test
+    public void checkSetLoyal() throws Exception {
+        cust.setLoyal(false);
+        assertEquals(false, cust.getLoyal());
+    }
 }

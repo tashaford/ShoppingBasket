@@ -1,13 +1,9 @@
 package com.example.natashaford.shoppingbasket;
 
-/**
- * Created by natashaford on 21/07/2017.
- */
-
 public interface Product {
 
-    public int getId();
+    public double getCost();
 
-    public int getCost();
+    public String getName();
 
 }

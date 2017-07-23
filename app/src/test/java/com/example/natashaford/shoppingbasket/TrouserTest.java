@@ -5,25 +5,22 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
-/**
- * Created by natashaford on 21/07/2017.
- */
-
 public class TrouserTest {
+
     Trouser trouser;
 
     @Before
     public void setUp() throws Exception {
-        trouser = new Trouser(2, 31);
+        trouser = new Trouser("trouserOne", 31);
     }
 
     @Test
-    public void checkGetId() throws Exception {
-        assertEquals(2, trouser.getId());
+    public void checkGetName() throws Exception {
+        assertEquals("trouserOne", trouser.getName());
     }
 
     @Test
     public void checkGetCost() throws Exception {
-        assertEquals(31, trouser.getCost());
+        assertEquals(31, trouser.getCost(), 0.01);
     }
 }
