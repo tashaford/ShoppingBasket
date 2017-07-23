@@ -1,6 +1,7 @@
 package com.example.natashaford.shoppingbasket;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 
 public class Basket {
@@ -42,14 +43,27 @@ public class Basket {
 
     public double checkBogof() {
         double discount = 0;
-        double number = 0;
+        int number = 0;
+        ArrayList<Double> discounts = new ArrayList<Double>();
         for (Product item : products) {
             if (item instanceof Top) {
+                discounts.add(item.getCost());
                 number++;
             }
         }
         if (number >= 2) {
-            discount = (number / 2) * 5;
+            number = number / 2;
+            Collections.sort(discounts);
+            Collections.reverse(discounts);
+            while (number >= 0) {
+                for (double price : discounts) {
+                    discounts.remove(price);
+                    number--;
+                }
+            }
+            for (double price : discounts) {
+                discount += price;
+            }
         }
         return discount;
     }
