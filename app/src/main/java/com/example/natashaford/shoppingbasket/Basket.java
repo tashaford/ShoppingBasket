@@ -54,6 +54,7 @@ public class Basket {
         if (number >= 2) {
             number = number / 2;
             Collections.sort(discounts);
+            Collections.reverse(discounts);
             while (number != 0) {
                 for (int i = 0; i < discounts.size(); i++) {
                     discounts.remove(i);

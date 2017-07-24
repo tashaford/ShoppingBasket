@@ -12,7 +12,10 @@ public class BasketTest {
     private Basket basket1;
     private Basket basket2;
     private Product top;
+    private Product top2;
+
     private Product trouser;
+
 
     @Before
     public void setUp() throws Exception {
@@ -21,6 +24,7 @@ public class BasketTest {
         basket1 = new Basket(cust1);
         basket2 = new Basket(cust2);
         top = new Top("topOne", 5);
+        top2 = new Top("topTwo", 6);
         trouser = new Trouser("trouserOne", 20);
     }
 
@@ -88,5 +92,12 @@ public class BasketTest {
         basket2.addToBasket(trouser);
         basket2.addToBasket(trouser);
         assertEquals(39.69, basket2.getBasketTotal(), 0.01);
+    }
+
+    @Test
+    public void checkLargerCosts() throws Exception {
+        basket1.addToBasket(top);
+        basket1.addToBasket(top2);
+        assertEquals(6, basket1.getBasketTotal(), 0.01);
     }
 }
