@@ -70,20 +70,30 @@ public class Basket {
 
 
     public double dealDiscount(double total) {
-        double discount = 0.9;
+        // Deal discount set here, currently 10%
+        double discount = 0.1;
+        // IF the basket total > £20 THEN
         if (total >= 20) {
-            return total * discount;
+            // The current basket has the discount removed and the new total is returned.
+            return total - (total * discount);
+            // ELSE
         } else {
+            // The original total is returned.
             return total;
-        }
+        } // END
     }
 
     public double loyaltyDiscount(double total) {
-        double discount = 0.98;
+        // Loyalty discount set here, currently 2%
+        double discount = 0.02;
+        // IF the basket total > £20 THEN
         if (customer.getLoyal()) {
-            return total * discount;
+            // The current basket has the discount removed and the new total is returned.
+            return total - (total * discount);
+            // ELSE
         } else {
+            // The original total is returned.
             return total;
-        }
+        } // END
     }
 }
